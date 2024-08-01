@@ -3,6 +3,7 @@ import Navigation from './src/navigation/routes';
 import SplashScreen from './src/screens/splash-screen';
 import CurtainAnimation from './src/screens/curtain-animation';
 
+
 const App: React.FC = () => {
   const [screen, setScreen] = useState<'curtain' | 'splash' | 'navigation'>(
     'curtain',
@@ -23,6 +24,7 @@ const App: React.FC = () => {
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
+
     };
   }, []);
 

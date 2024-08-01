@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "LoginAnimation.app"
-               BlueprintName = "LoginAnimation"
-               ReferencedContainer = "container:LoginAnimation.xcodeproj">
+               BuildableName = "LocalPushNotification.app"
+               BlueprintName = "LocalPushNotification"
+               ReferencedContainer = "container:LocalPushNotification.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "LoginAnimationTests.xctest"
-               BlueprintName = "LoginAnimationTests"
-               ReferencedContainer = "container:LoginAnimation.xcodeproj">
+               BuildableName = "LocalPushNotificationTests.xctest"
+               BlueprintName = "LocalPushNotificationTests"
+               ReferencedContainer = "container:LocalPushNotification.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "LoginAnimation.app"
-            BlueprintName = "LoginAnimation"
-            ReferencedContainer = "container:LoginAnimation.xcodeproj">
+            BuildableName = "LocalPushNotification.app"
+            BlueprintName = "LocalPushNotification"
+            ReferencedContainer = "container:LocalPushNotification.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "LoginAnimation.app"
-            BlueprintName = "LoginAnimation"
-            ReferencedContainer = "container:LoginAnimation.xcodeproj">
+            BuildableName = "LocalPushNotification.app"
+            BlueprintName = "LocalPushNotification"
+            ReferencedContainer = "container:LocalPushNotification.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

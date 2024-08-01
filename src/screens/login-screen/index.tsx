@@ -14,7 +14,6 @@ import {
 import {WD, HD} from '../../common/responsive';
 import COLORS from '../../common/colors';
 import {customFonts} from '../../common/custom-fonts';
-import {useNavigation} from '@react-navigation/native';
 import Toast from 'react-native-simple-toast';
 import Animated, {
   useAnimatedStyle,
@@ -24,6 +23,7 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 import {validateEmail, validatePassword} from '../../utils/validations';
+import LocalNotification from '../../../LocalNotification';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState<string>();
@@ -123,7 +123,15 @@ export default function LoginScreen() {
     setTimeout(() => {
       setIsLoading(false);
       Toast.show('Your credentails are valid', Toast.LONG);
+      // Call this function to show a notification
+
     }, 5000);
+  };
+
+
+  const handleShowNotification = () => {
+    console.log("Calling showNotification");
+    LocalNotification.showNotification('App Termination', 'Hey, the app is killed now. None of the JS will work.');
   };
 
   return (
@@ -154,6 +162,7 @@ export default function LoginScreen() {
         <View style={styles.inputSection}>
           <TextInput
             style={styles.input}
+            placeholderTextColor={COLORS.darkgray}
             placeholder="Email"
             underlineColorAndroid="transparent"
             value={email}
@@ -165,6 +174,7 @@ export default function LoginScreen() {
           <TextInput
             style={styles.input}
             placeholder="Password"
+            placeholderTextColor={COLORS.darkgray}
             underlineColorAndroid="transparent"
             value={password}
             onChangeText={text => setPassword(text)}
@@ -176,7 +186,7 @@ export default function LoginScreen() {
           <Text style={styles.forgotPasswordStyles}>Forgot Password?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.Btn} onPress={handleSubmit}>
+        <TouchableOpacity style={styles.Btn} onPress={handleShowNotification}>
           {isLoading ? (
             <ActivityIndicator size={'small'} color={'#fff'} />
           ) : (

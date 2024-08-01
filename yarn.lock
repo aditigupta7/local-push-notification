@@ -3060,39 +3060,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"LoginAnimation@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "LoginAnimation@workspace:."
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@babel/preset-env": ^7.20.0
-    "@babel/runtime": ^7.20.0
-    "@react-native/babel-preset": 0.74.86
-    "@react-native/eslint-config": 0.74.86
-    "@react-native/metro-config": 0.74.86
-    "@react-native/typescript-config": 0.74.86
-    "@react-navigation/native": ^6.1.18
-    "@react-navigation/native-stack": ^6.11.0
-    "@types/react": ^18.2.6
-    "@types/react-test-renderer": ^18.0.0
-    babel-jest: ^29.6.3
-    eslint: ^8.19.0
-    jest: ^29.6.3
-    prettier: 2.8.8
-    react: 18.2.0
-    react-native: 0.74.4
-    react-native-asset: ^2.1.1
-    react-native-reanimated: ^3.14.0
-    react-native-rename: ^3.2.14
-    react-native-safe-area-context: ^4.10.8
-    react-native-screens: ^3.32.0
-    react-native-simple-toast: ^3.3.1
-    react-native-vector-icons: ^10.1.0
-    react-test-renderer: 18.2.0
-    typescript: 5.0.4
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -7024,6 +6991,39 @@ __metadata:
   checksum: 0c37f9f7fa212b38912b7145e1cd16a5f3cd34d782441c3e6ca653485d326f58b3caccda66efce1c5812bde4961bbde3374fae4b0d11bf1226152337f3894aa5
   languageName: node
   linkType: hard
+
+"localpushnotification@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "localpushnotification@workspace:."
+  dependencies:
+    "@babel/core": ^7.20.0
+    "@babel/preset-env": ^7.20.0
+    "@babel/runtime": ^7.20.0
+    "@react-native/babel-preset": 0.74.86
+    "@react-native/eslint-config": 0.74.86
+    "@react-native/metro-config": 0.74.86
+    "@react-native/typescript-config": 0.74.86
+    "@react-navigation/native": ^6.1.18
+    "@react-navigation/native-stack": ^6.11.0
+    "@types/react": ^18.2.6
+    "@types/react-test-renderer": ^18.0.0
+    babel-jest: ^29.6.3
+    eslint: ^8.19.0
+    jest: ^29.6.3
+    prettier: 2.8.8
+    react: 18.2.0
+    react-native: 0.74.4
+    react-native-asset: ^2.1.1
+    react-native-reanimated: ^3.14.0
+    react-native-rename: ^3.2.14
+    react-native-safe-area-context: ^4.10.8
+    react-native-screens: ^3.32.0
+    react-native-simple-toast: ^3.3.1
+    react-native-vector-icons: ^10.1.0
+    react-test-renderer: 18.2.0
+    typescript: 5.0.4
+  languageName: unknown
+  linkType: soft
 
 "locate-path@npm:^3.0.0":
   version: 3.0.0
