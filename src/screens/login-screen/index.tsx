@@ -23,14 +23,13 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 import {validateEmail, validatePassword} from '../../utils/validations';
-import LocalNotification from '../../../LocalNotification';
 
 export default function LoginScreen() {
+  const {width, height} = Dimensions.get('window');
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [isLoading, setIsLoading] = useState(false);
 
-  const {width, height} = Dimensions.get('window');
 
   const translationX = useSharedValue(0);
   const translationY = useSharedValue(0);
@@ -129,10 +128,7 @@ export default function LoginScreen() {
   };
 
 
-  const handleShowNotification = () => {
-    console.log("Calling showNotification");
-    LocalNotification.showNotification('App Termination', 'Hey, the app is killed now. None of the JS will work.');
-  };
+  
 
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -186,7 +182,7 @@ export default function LoginScreen() {
           <Text style={styles.forgotPasswordStyles}>Forgot Password?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.Btn} onPress={handleShowNotification}>
+        <TouchableOpacity style={styles.Btn} onPress={handleSubmit}>
           {isLoading ? (
             <ActivityIndicator size={'small'} color={'#fff'} />
           ) : (
