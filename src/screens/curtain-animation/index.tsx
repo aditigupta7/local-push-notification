@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     overflow: 'hidden',
+    backgroundColor:COLORS.white
   },
   view: {
     position: 'absolute',

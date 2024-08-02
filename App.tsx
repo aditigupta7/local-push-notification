@@ -23,11 +23,10 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleAppStateChange = (nextAppState: AppStateStatus) => {
       if (appState.match(/inactive|background/) && nextAppState === 'active') {
-        console.log('App has come to the foreground!');
+        console.log('App is in foreground!');
       } else if (nextAppState.match(/inactive|background/)) {
         handleShowNotification();
-        console.log('App has gone to the background or is inactive!');
-        // Save data or perform cleanup here
+        console.log('App is in background or is inactive!');
       }
       setAppState(nextAppState);
     };
