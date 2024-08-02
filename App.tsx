@@ -2,10 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Navigation from './src/navigation/routes';
 import SplashScreen from './src/screens/splash-screen';
 import CurtainAnimation from './src/screens/curtain-animation';
-import { AppState, AppStateStatus } from 'react-native';
-import LocalNotification from './LocalNotification';
-
-
+import {AppState, AppStateStatus, NativeModules} from 'react-native';
+import LocalNotificationNativeModule from './LocalNotification';
 
 const App: React.FC = () => {
   const [screen, setScreen] = useState<'curtain' | 'splash' | 'navigation'>(
@@ -15,8 +13,11 @@ const App: React.FC = () => {
   const [appState, setAppState] = useState(AppState.currentState);
 
   const handleShowNotification = () => {
-    console.log("Calling showNotification");
-    LocalNotification.showNotification('App Termination', 'Hey, the app is killed now. None of the JS will work.');
+    console.log('Calling showNotification');
+    LocalNotificationNativeModule.showNotification(
+      'App Termination',
+      'Hey, the app is killed now. None of the JS will work.',
+    );
   };
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const App: React.FC = () => {
       if (appState.match(/inactive|background/) && nextAppState === 'active') {
         console.log('App has come to the foreground!');
       } else if (nextAppState.match(/inactive|background/)) {
-        handleShowNotification()
+        handleShowNotification();
         console.log('App has gone to the background or is inactive!');
         // Save data or perform cleanup here
       }
@@ -53,7 +54,6 @@ const App: React.FC = () => {
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
-
     };
   }, []);
 

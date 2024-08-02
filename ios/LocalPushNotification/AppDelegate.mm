@@ -29,3 +29,13 @@
 }
 
 @end
+
+
+#import "React/RCTBridgeModule.h"
+
+@interface RCT_EXTERN_MODULE(LocalNotificationModule, NSObject)
+
+RCT_EXTERN_METHOD(requestAuthorization:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(scheduleNotification:(NSString *)title body:(NSString *)body)
+
+@end

@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   StatusBar,
   SafeAreaView,
-  Image,
   Dimensions,
 } from 'react-native';
 import {WD, HD} from '../../common/responsive';
@@ -29,7 +28,6 @@ export default function LoginScreen() {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [isLoading, setIsLoading] = useState(false);
-
 
   const translationX = useSharedValue(0);
   const translationY = useSharedValue(0);
@@ -123,12 +121,8 @@ export default function LoginScreen() {
       setIsLoading(false);
       Toast.show('Your credentails are valid', Toast.LONG);
       // Call this function to show a notification
-
     }, 5000);
   };
-
-
-  
 
   return (
     <SafeAreaView style={styles.mainContainer}>
