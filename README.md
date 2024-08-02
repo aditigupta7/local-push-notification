@@ -26,7 +26,7 @@ To get started with MyReactNativeApp, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/aditigupta7/LocalPushNotification.git
+   git clone https://github.com/aditigupta7/local-push-notification.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -63,7 +63,7 @@ To enable local notifications when the app is killed, follow these steps:
 
 1. **Android**:
    - Ensure you have the required permissions in your `AndroidManifest.xml`:
-     ```xml
+     ```bash
    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
      ```
    - Implement a NotificationReceiver to handle the notification logic.
@@ -71,6 +71,6 @@ To enable local notifications when the app is killed, follow these steps:
 2. **iOS**:
    - Request permission for notifications in your `AppDelegate.m`:
     
-   - Implemented a native module for Notification functionality on ios using bridging and also allow to request users the  permission to give notification when app is killed.
+   - Implemented a native module for Notification functionality on ios using bridging and also  allow to request users the  permission to give notification when app is killed.
 
 
