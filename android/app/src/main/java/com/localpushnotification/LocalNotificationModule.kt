@@ -16,6 +16,13 @@ class LocalNotificationModule(reactContext: ReactApplicationContext) : ReactCont
     companion object {
         private const val CHANNEL_ID = "MY_CHANNEL_ID"
         private const val NOTIFICATION_ID = 1
+
+        // Create a method to get an instance of the notification module
+        @JvmStatic
+        fun showNotification(context: Context, title: String, message: String) {
+            val notification = LocalNotificationModule(ReactApplicationContext(context))
+            notification.showNotification(title, message)
+        }
     }
 
     override fun getName(): String {
