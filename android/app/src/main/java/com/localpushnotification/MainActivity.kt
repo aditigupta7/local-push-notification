@@ -33,10 +33,12 @@ class MainActivity : ReactActivity() {
         super.onCreate(savedInstanceState)
     }
 
+
+
     override fun onDestroy() {
         super.onDestroy()
         Log.d("MainActivity", "Scheduling notification")
-        // Calling notification when app is killed.
+        // Calling local notification when app is killed or destroyed
         LocalNotificationModule.showNotification(this, "App Termination", "Hey, the app is killed now. None of the JS will work.")
 
     }

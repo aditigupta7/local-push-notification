@@ -6,9 +6,9 @@ const {LocalNotificationModule} = NativeModules; // for ios
 const LocalNotificationNativeModule = {
   showNotification(title, message) {
     if (Platform.OS === 'android') {
-      LocalNotification.showNotification(title, message);
+    //  LocalNotification.showNotification(title, message);
     } else {
-      // Request notification permissions
+      // Request permissions for push notification 
       LocalNotificationModule.requestAuthorization()
         .then(granted => {
           if (granted) {
@@ -20,6 +20,8 @@ const LocalNotificationNativeModule = {
         .catch(error => {
           console.error('Authorization error:', error);
         });
+
+        // Calling scheduleNotification method to initiate push notification
       LocalNotificationModule.scheduleNotification(title, message);
     }
   },

@@ -30,6 +30,8 @@
 
 @end
 
+// bridging the module
+// request method & scheduleNotification method
 
 #import "React/RCTBridgeModule.h"
 

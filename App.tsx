@@ -10,8 +10,10 @@ const App: React.FC = () => {
     'curtain',
   );
 
+  // storing current AppState
   const [appState, setAppState] = useState(AppState.currentState);
 
+  // function to invole showNotification function 
   const handleShowNotification = () => {
     console.log('Calling showNotification');
     LocalNotificationNativeModule.showNotification(
@@ -21,6 +23,7 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
+    // created an AppState function to call handleShowNotification in ios 
     const handleAppStateChange = (nextAppState: AppStateStatus) => {
       if (appState.match(/inactive|background/) && nextAppState === 'active') {
         console.log('App is in foreground!');
@@ -36,7 +39,7 @@ const App: React.FC = () => {
     // return () => {
     //   AppState.removeEventListener('change', handleAppStateChange);
     // };
-  }, [appState]);
+  }, []);
 
   useEffect(() => {
     // Start CurtainAnimation

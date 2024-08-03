@@ -14,10 +14,11 @@ import com.facebook.react.bridge.ReactMethod
 class LocalNotificationModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
     companion object {
+        // channel id 
         private const val CHANNEL_ID = "MY_CHANNEL_ID"
         private const val NOTIFICATION_ID = 1
 
-        // Create a method to get an instance of the notification module
+        // Created a method to get an instance of the notification module
         @JvmStatic
         fun showNotification(context: Context, title: String, message: String) {
             val notification = LocalNotificationModule(ReactApplicationContext(context))
